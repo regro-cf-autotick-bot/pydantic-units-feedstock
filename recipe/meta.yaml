@@ -1,5 +1,5 @@
 {% set name = "pydantic-units" %}
-{% set version = "0.0.1" %}
+{% set version = "0.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/SimonBoothroyd/pydantic-units/archive/{{ version }}.tar.gz
-  sha256: a5135ca63aaa35ac245472a94951ad3d23e2004e1e40ebaebdfffa06ec0e1886
+  sha256: 7261cf12c400af0c8953ecaaf3af40fcb0ce929fc70c3ea0601783e03ec5b07a
 
 build:
   noarch: python
