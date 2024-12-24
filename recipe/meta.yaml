@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "pydantic-units" %}
 {% set version = "0.0.2" %}
 
@@ -12,16 +13,16 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - pip
     - setuptools >=61.0
     - setuptools_scm >=8
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - pydantic
     - openmm
 
@@ -30,6 +31,7 @@ test:
     - pydantic_units
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
 
